@@ -1,6 +1,6 @@
 import sys
 from .classmodule import MyClass
-from .funcmodule import my_function
+from .funcmodule import startDjangoProject
 
 def main():
     print('in main')
@@ -9,7 +9,7 @@ def main():
     for arg in args:
         print('passed argument :: {}'.format(arg))
 
-    my_function('hello world')
+    startDjangoProject(args)
 
     my_object = MyClass('Django + React Haha')
     my_object.say_name()
