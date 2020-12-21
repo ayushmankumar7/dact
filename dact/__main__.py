@@ -8,10 +8,13 @@ def main():
     print('count of args :: {}'.format(len(args)))
     for arg in args:
         print('passed argument :: {}'.format(arg))
-    # print(args[0])
-    startDjangoProject(args[0])
+    if len(args) < 1: 
+        print("Please Enter the Django Project name. Use it like 'dact yourprojectname'")
+    elif len(args) == 1:
 
-    my_object = MyClass('Django + React Haha')
+        startDjangoProject(args[0])
+
+    my_object = MyClass('Your Django + reACT Project is ready to use.')
     my_object.say_name()
 
 def testing():
