@@ -5,6 +5,7 @@ setup(
     packages = ['dact'],
     entry_points = {
         'console_scripts': [
-            'dact = dact.__main__:main'
+            'dact = dact.__main__:main', 
+            'dact-test = dact.__main__:testing'
         ]
     })

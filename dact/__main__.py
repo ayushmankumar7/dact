@@ -14,5 +14,8 @@ def main():
     my_object = MyClass('Django + React Haha')
     my_object.say_name()
 
+def testing():
+    print("Testing function was called")
+
 if __name__ == '__main__':
     main()
