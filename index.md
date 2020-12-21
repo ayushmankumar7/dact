@@ -1,10 +1,10 @@
-## Welcome to GitHub Pages
+## Welcome to Dact
 
-You can use the [editor on GitHub](https://github.com/ayushmankumar7/dact/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+To contribute to the documentation, you can use the [editor on GitHub](https://github.com/ayushmankumar7/dact/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Hey Developer, welcome to Dact - Django + React, a CLI app for setting up Django React Full Stack Development setup in a single command. 
 
-### Markdown
+### How to Use dact
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
