@@ -18,13 +18,13 @@ def manipulate_project_url(pro_url, app_name):
 
     with open(pro_url, 'w') as b:
         for i, line in enumerate(lines):
-            if i == 17:
-                b.write('import django.urls import path, include \n')
-            elif i == 21:
+            if i == 16:
+                b.write('from django.urls import include \n')
+            if i == 20:
                 b.write("\tpath('', include('frontend.urls')),\n")
 
-            else:
-                b.write(line)
+            print(i)
+            b.write(line)
 
 
 
@@ -38,3 +38,4 @@ def startDjangoProject(name, app_name = "reactfrontend"):
     os.system(f"django-admin startapp {app_name}")
     os.chdir(name)
     manipulate_settings('settings.py', app_name)
+    manipulate_project_url('urls.py', app_name)
