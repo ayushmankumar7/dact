@@ -8,8 +8,8 @@ def main():
     print('count of args :: {}'.format(len(args)))
     for arg in args:
         print('passed argument :: {}'.format(arg))
-
-    startDjangoProject(args)
+    # print(args[0])
+    startDjangoProject(args[0])
 
     my_object = MyClass('Django + React Haha')
     my_object.say_name()
