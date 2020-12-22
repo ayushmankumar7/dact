@@ -33,7 +33,7 @@ def main():
         startDjangoProject(args[0])
 
     elif len(args) ==2:
-        if(args[1]=='createreact'):
+        if(args[0]=='createreact'):
             x = os.getcwdb()
             getcurrent(x)
         else:
