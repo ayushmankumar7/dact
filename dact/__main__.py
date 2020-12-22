@@ -2,7 +2,7 @@ import sys
 from .classmodule import MyClass
 from .funcmodule import startDjangoProject
 from .createreact import getcurrent
-
+import os
 def main():
     print('in main')
     args = sys.argv[1:]
@@ -34,7 +34,8 @@ def main():
 
     elif len(args) ==2:
         if(args[1]=='createreact'):
-            getcurrent()
+            x = os.getcwdb()
+            getcurrent(x)
         else:
             startDjangoProject(args[0], args[1])
     
