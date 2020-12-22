@@ -30,15 +30,13 @@ def main():
 
 
     elif len(args) == 1:
-        startDjangoProject(args[0])
+        if args[0] == 'createreact':
+            getcurrent()
+        else:            
+            startDjangoProject(args[0])
 
     elif len(args) ==2:
-        if (args[0] == 'createreact'):
-            x = os.getcwdb()
-            getcurrent(x)
-        else:
-            print(args)
-            startDjangoProject(args[0], args[1])
+        startDjangoProject(args[0], args[1])
     
     # my_object = MyClass('Your Django + reACT Project is ready to use.')
     # my_object.say_name()
