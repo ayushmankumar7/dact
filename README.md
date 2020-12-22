@@ -2,7 +2,7 @@
 
 ## Django + React
 
-1. Start a Django Project 
+1. Start a Django Project with default Frontend app name 
 `dact myproject`
 
 2. Start Django Project with custom Frontend app name 
