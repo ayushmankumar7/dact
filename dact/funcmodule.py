@@ -12,6 +12,7 @@ def manipulate_settings(setting_file, app_name):
             b.write(line)
      
 
+
 def manipulate_project_url(pro_url, app_name):
     with open(pro_url, 'r') as b:
         lines = b.readlines()
@@ -24,6 +25,7 @@ def manipulate_project_url(pro_url, app_name):
                 b.write("\tpath('', include('frontend.urls')),\n")
             b.write(line)
 
+
 def manipulate_app_view(view_url, app_name):
     with open(view_url, 'r') as b:
         lines = b.readlines()
@@ -35,8 +37,18 @@ def manipulate_app_view(view_url, app_name):
                 b.write("def index(request, *args, **kwargs):\n\treturn render(request, 'index.html')\n")
             b.write(line)
 
+
 def manipulate_app_urls(urls_url, app_name):
     os.system("touch urls.py")
+    
+
+    with open(urls_url, 'w') as b:
+            
+        b.write("from django.urls import path \nfrom .views import index \n\nurlpatterns = [ \n\tpath('', index),\n]")
+            
+
+
+
 
 def startDjangoProject(name, app_name = "reactfrontend"):
     print("[INFO] Creating Django Project ....")
