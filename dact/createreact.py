@@ -138,7 +138,7 @@ def write_package_json():
                 "description": "",
                 "main": "./src/index.js",
                 "scripts": {
-                        "test": "echo \"Error: no test specified\" && exit 1",
+                        "test": "echo Error: no test specified && exit 1",
                         "webpack": "webpack",
                         "watch": "./node_modules/.bin/webpack --watch --config webpack.dev.js"
                 },
