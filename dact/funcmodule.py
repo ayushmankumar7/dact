@@ -1,6 +1,5 @@
 import os
 
-
 def manipulate_settings(setting_file, app_name):
     with open(setting_file, 'r') as b:
         lines = b.readlines()

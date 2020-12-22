@@ -1,6 +1,7 @@
 import sys
 from .classmodule import MyClass
 from .funcmodule import startDjangoProject
+from .createreact import getcurrent
 
 def main():
     print('in main')
@@ -29,12 +30,14 @@ def main():
 
 
     elif len(args) == 1:
-
         startDjangoProject(args[0])
 
     elif len(args) ==2:
-        startDjangoProject(args[0], args[1])
-
+        if(args[1]=='createreact'):
+            getcurrent()
+        else:
+            startDjangoProject(args[0], args[1])
+    
     # my_object = MyClass('Your Django + reACT Project is ready to use.')
     # my_object.say_name()
 
