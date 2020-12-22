@@ -39,12 +39,9 @@ def manipulate_app_view(view_url, app_name):
 
 
 def manipulate_app_urls(urls_url, app_name):
-    os.system("touch urls.py")
-    
-
-    with open(urls_url, 'w') as b:
-            
-        b.write("from django.urls import path \nfrom .views import index \n\nurlpatterns = [ \n\tpath('', index),\n]")
+    open("urls.py","x")
+    with open(urls_url, 'w') as b:   
+        b.write("from django.urls import path \nfrom . import views \n\nurlpatterns = [ \n\tpath('', views.index),\n]")
             
 
 
