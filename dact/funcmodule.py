@@ -35,7 +35,8 @@ def manipulate_app_view(view_url, app_name):
                 b.write("def index(request, *args, **kwargs):\n\treturn render(request, 'index.html')\n")
             b.write(line)
 
-
+def manipulate_app_urls(urls_url, app_name):
+    os.system("touch urls.py")
 
 def startDjangoProject(name, app_name = "reactfrontend"):
     print("[INFO] Creating Django Project ....")
@@ -52,3 +53,4 @@ def startDjangoProject(name, app_name = "reactfrontend"):
     os.chdir(app_name)
 
     manipulate_app_view('views.py', app_name)
+    manipulate_app_urls('urls.py', app_name)
