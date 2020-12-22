@@ -30,11 +30,8 @@ def main():
 
 
     elif len(args) == 1:
-        if args[0] == 'createreact':
-            getcurrent()
-        else:            
-            startDjangoProject(args[0])
-
+        startDjangoProject(args[0])
+        
     elif len(args) ==2:
         startDjangoProject(args[0], args[1])
     
