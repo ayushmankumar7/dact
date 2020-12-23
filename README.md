@@ -1,5 +1,5 @@
 # dact
-![dact logo](extras/dact.png)
+![dact logo](https://raw.githubusercontent.com/ayushmankumar7/dact/main/extras/dact.png)
 
 ## Django + React
 
