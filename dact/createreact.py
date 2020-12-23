@@ -139,7 +139,8 @@ def write_package_json():
                 "scripts": {
                         "test": "echo Error: no test specified && exit 1",
                         "webpack": "webpack",
-                        "watch": "./node_modules/.bin/webpack --watch --config webpack.dev.js"
+                        "watch": "./node_modules/.bin/webpack --watch --config webpack.dev.js",
+                        "dev":"webpack --mode development --watch"
                 },
                 "author": "",
                 "license": "ISC",
@@ -218,6 +219,8 @@ def create():
         print("Exited")
     os.chdir("..")
     os.chdir(x)
+
+
 
      
 
