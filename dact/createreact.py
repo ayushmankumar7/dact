@@ -41,7 +41,6 @@ def write_webpack_config():
 
             module.exports = {
                 entry:{ app:'./src/index.js'},
-                watch:true,
                 devtool:'source-map',
                 output: {
                 path: path.resolve(__dirname,'dist'),
@@ -211,6 +210,13 @@ def create():
     os.chdir('templates')
     make_template()
     os.chdir('..')
+    os.chdir(x)
+    os.chdir("static")
+    try:
+        os.system(f"npm run webpack --no-hot")
+    except:
+        print("Exited")
+    os.chdir("..")
     os.chdir(x)
 
      
