@@ -15,6 +15,7 @@ setup(
     entry_points = {
         'console_scripts': [
             'dact = dact.__main__:main', 
+            'dact-watch = dact.__main__:watch_react' 
             'dact-test = dact.__main__:testing'
         ]
     },
