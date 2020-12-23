@@ -41,7 +41,6 @@ def write_webpack_config():
 
             module.exports = {
                 entry:{ app:'./src/index.js'},
-                watch:true,
                 devtool:'source-map',
                 output: {
                 path: path.resolve(__dirname,'dist'),
@@ -140,7 +139,8 @@ def write_package_json():
                 "scripts": {
                         "test": "echo Error: no test specified && exit 1",
                         "webpack": "webpack",
-                        "watch": "./node_modules/.bin/webpack --watch --config webpack.dev.js"
+                        "watch": "./node_modules/.bin/webpack --watch --config webpack.dev.js",
+                        "dev":"webpack --mode development --watch"
                 },
                 "author": "",
                 "license": "ISC",
@@ -212,6 +212,15 @@ def create():
     make_template()
     os.chdir('..')
     os.chdir(x)
+    os.chdir("static")
+    try:
+        os.system(f"npm run webpack --no-hot")
+    except:
+        print("Exited")
+    os.chdir("..")
+    os.chdir(x)
+
+
 
      
 

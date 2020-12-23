@@ -11,6 +11,7 @@ def manipulate_settings(setting_file, app_name):
             
             if i == 53:
                 b.write("""
+import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
