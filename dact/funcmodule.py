@@ -48,7 +48,7 @@ def manipulate_project_url(pro_url, app_name):
             if i == 16:
                 b.write('from django.urls import include \n')
             if i == 20:
-                b.write("\tpath('', include('frontend.urls')),\n")
+                b.write(f"\tpath('', include('{app_name}.urls')),\n")
             b.write(line)
 
 
