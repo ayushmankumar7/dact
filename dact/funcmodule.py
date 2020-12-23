@@ -1,6 +1,5 @@
 import os
-
-
+from .createreact import create 
 def manipulate_settings(setting_file, app_name):
     with open(setting_file, 'r') as b:
         lines = b.readlines()
@@ -63,3 +62,4 @@ def startDjangoProject(name, app_name = "reactfrontend"):
 
     manipulate_app_view('views.py', app_name)
     manipulate_app_urls('urls.py', app_name)
+    create()
