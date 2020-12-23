@@ -41,8 +41,8 @@ def main():
     # my_object = MyClass('Your Django + reACT Project is ready to use.')
     # my_object.say_name()
 
-def watch_react(config_file):
-    with open(config_file) as f:
+def watch_react():
+    with open("dact_config.json") as f:
         data = json.load(f)
     frontend_app = data['Frontend_AppName']
     os.chdir(f"{frontend_app}/static")
