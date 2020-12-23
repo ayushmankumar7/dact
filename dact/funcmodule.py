@@ -9,6 +9,14 @@ def manipulate_settings(setting_file, app_name):
             if i== 39:
                 b.write(f"\t'{app_name}.apps.{app_name.title()}Config',\n")
             b.write(line)
+            
+
+        b.write('''
+STATIC_URL = '/reactfrontend/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'reactfrontend/static')]
+
+
+         ''')
      
 
 
