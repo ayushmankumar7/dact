@@ -1,4 +1,5 @@
 import os
+import json
 from .createreact import create 
 def manipulate_settings(setting_file, app_name):
     with open(setting_file, 'r') as b:
@@ -70,6 +71,25 @@ def manipulate_app_urls(urls_url, app_name):
         b.write("from django.urls import path \nfrom . import views \n\nurlpatterns = [ \n\tpath('', views.index),\n]")
             
 
+def config_dact(name, app_name):
+    open("dact_config.json", "x") 
+    with open("dact_config.json", "w") as file: 
+        file.write("""
+{
+    "Project_name": "%s",
+    "Frontend_AppName": "%s"
+}
+        """%(name, app_name))
+
+
+
+def watch_react(config_file):
+    with open(config_file) as f:
+        data = json.load(f)
+    frontend_app = data['Frontend_AppName']
+    os.chdir(f"{frontend_app}/static")
+    os.system("npm run dev")
+    
 
 
 
@@ -77,6 +97,11 @@ def startDjangoProject(name, app_name = "reactfrontend"):
     print("[INFO] Creating Django Project ....")
     os.system(f"django-admin startproject {name}")
     os.chdir(name)
+
+    print("[INFO] Creating Config File")
+    config_dact(name, app_name)
+    watch_react("dact_config.json")
+
     print("[INFO] Creating React App ....")
     os.system(f"django-admin startapp {app_name}")
     os.chdir(name)
