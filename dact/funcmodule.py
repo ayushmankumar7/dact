@@ -1,5 +1,4 @@
 import os
-import json
 from .createreact import create 
 def manipulate_settings(setting_file, app_name):
     with open(setting_file, 'r') as b:
@@ -83,16 +82,6 @@ def config_dact(name, app_name):
 
 
 
-def watch_react(config_file):
-    with open(config_file) as f:
-        data = json.load(f)
-    frontend_app = data['Frontend_AppName']
-    os.chdir(f"{frontend_app}/static")
-    os.system("npm run dev")
-    
-
-
-
 def startDjangoProject(name, app_name = "reactfrontend"):
     print("[INFO] Creating Django Project ....")
     os.system(f"django-admin startproject {name}")
@@ -100,7 +89,7 @@ def startDjangoProject(name, app_name = "reactfrontend"):
 
     print("[INFO] Creating Config File")
     config_dact(name, app_name)
-    watch_react("dact_config.json")
+    
 
     print("[INFO] Creating React App ....")
     os.system(f"django-admin startapp {app_name}")
