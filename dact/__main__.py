@@ -9,14 +9,7 @@ from .createreact import getcurrent
 def main():
     print('in main')
     args = sys.argv[1:]
-
-
-    # print('count of args :: {}'.format(len(args)))
-    # for arg in args:
-    #     print('passed argument :: {}'.format(arg))
-    
-    
-    
+   
     if len(args) < 1: 
         print(
             
@@ -38,8 +31,6 @@ def main():
     elif len(args) ==2:
         startDjangoProject(args[0], args[1])
     
-    # my_object = MyClass('Your Django + reACT Project is ready to use.')
-    # my_object.say_name()
 
 def watch_react():
     with open("dact_config.json") as f:
