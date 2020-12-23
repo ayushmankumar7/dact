@@ -89,4 +89,4 @@ def startDjangoProject(name, app_name = "reactfrontend"):
 
     manipulate_app_view('views.py', app_name)
     manipulate_app_urls('urls.py', app_name)
-    # create()
+    create()
