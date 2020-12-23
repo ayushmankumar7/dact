@@ -8,14 +8,33 @@ def manipulate_settings(setting_file, app_name):
         for i, line in enumerate(lines):
             if i== 39:
                 b.write(f"\t'{app_name}.apps.{app_name.title()}Config',\n")
-            b.write(line)
             
+            if i == 53:
+                b.write("""
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,'%s/templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+"""%(app_name))
+            if (i>52 and i<(53+15)):
+                continue
 
-        b.write('''
-STATIC_URL = '/reactfrontend/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'reactfrontend/static')]
+            b.write(line)
 
-
+        b.write(f'''
+STATIC_URL = '/{app_name}/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'{app_name}/static')]
          ''')
      
 
@@ -70,4 +89,4 @@ def startDjangoProject(name, app_name = "reactfrontend"):
 
     manipulate_app_view('views.py', app_name)
     manipulate_app_urls('urls.py', app_name)
-    create()
+    # create()
