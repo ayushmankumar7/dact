@@ -1,8 +1,11 @@
 import sys
+import os
+import json
+
 from .classmodule import MyClass
 from .funcmodule import startDjangoProject
 from .createreact import getcurrent
-import os
+
 def main():
     print('in main')
     args = sys.argv[1:]
@@ -37,6 +40,14 @@ def main():
     
     # my_object = MyClass('Your Django + reACT Project is ready to use.')
     # my_object.say_name()
+
+def watch_react(config_file):
+    with open(config_file) as f:
+        data = json.load(f)
+    frontend_app = data['Frontend_AppName']
+    os.chdir(f"{frontend_app}/static")
+    os.system("npm run dev")
+
 
 def testing():
     print("Testing function was called")

@@ -71,6 +71,15 @@ def manipulate_app_urls(urls_url, app_name):
         b.write("from django.urls import path \nfrom . import views \n\nurlpatterns = [ \n\tpath('', views.index),\n]")
             
 
+def config_dact(name, app_name):
+    open("dact_config.json", "x") 
+    with open("dact_config.json", "w") as file: 
+        file.write("""
+{
+    "Project_name": "%s",
+    "Frontend_AppName": "%s"
+}
+        """%(name, app_name))
 
 
 
@@ -78,6 +87,11 @@ def startDjangoProject(name, app_name = "reactfrontend"):
     print("[INFO] Creating Django Project ....")
     os.system(f"django-admin startproject {name}")
     os.chdir(name)
+
+    print("[INFO] Creating Config File")
+    config_dact(name, app_name)
+    
+
     print("[INFO] Creating React App ....")
     os.system(f"django-admin startapp {app_name}")
     os.chdir(name)
