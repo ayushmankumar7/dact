@@ -147,13 +147,14 @@ def write_index_js():
     with open('index.js','w') as file:
         file.write(
             '''
-            import React from 'react'
-            import ReactDOM from 'react-dom'
-            import App from './App'
-            ReactDOM.render(
-                    <App />,
-                document.getElementById('root')
-            );
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import './index.css'
+ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+);
             '''.strip()
         )
         file.close()
@@ -270,7 +271,11 @@ def write_app_css():
         '''.strip())
         file.close()
 
-
+def write_index_css():
+    open("index.css","x")
+    with open("index.css",'w') as file:
+        file.write('''
+        ''')
 
 
 def create():
@@ -284,6 +289,8 @@ def create():
     write_index_js()
     write_react_App_js()
     write_svg()
+    write_app_css()
+    write_index_css()
     os.chdir('..')
     os.chdir(x)
     os.chdir('templates')
