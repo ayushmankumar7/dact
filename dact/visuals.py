@@ -25,7 +25,7 @@ def complete_msg(app_name):
 
     print("Setup Complete! ")
     print("""
-        To Start the sever write the following commands: 
+        To Start the server write the following commands: 
             1. cd %s
             2. python manage.py runserver (Windows)
                python3 manage.py runserver (Others)
