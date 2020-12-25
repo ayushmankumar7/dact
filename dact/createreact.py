@@ -127,7 +127,7 @@ return(
                     Edit App.js to get started with frontend!!
                     </p>
                     <p>
-                    Server Running at 128.0.0.1:8000
+                    Server Running at 127.0.0.1:8000
                     </p>
                     <p>
                         Run dact-watch in BASE_DIR to start dev mode
