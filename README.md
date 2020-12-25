@@ -1,6 +1,10 @@
 # dact
 ![dact logo](https://raw.githubusercontent.com/ayushmankumar7/dact/main/extras/dact.png)
 
+## Installing dact 
+
+`pip install dact`
+
 ## Django + React
 
 1. Start a Django Project with default Frontend app name 
