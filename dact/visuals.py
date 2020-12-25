@@ -1,5 +1,5 @@
 def complete_msg(app_name):
-    print("""
+    print('\033[36m' + """
                                                                                                  
                                                                  `+:.                               
                                                                  .:oso/.                            
@@ -21,7 +21,7 @@ def complete_msg(app_name):
                                                                                          
     
     
-     """)
+     """ + '\033[0m')
 
     print("Setup Complete! ")
     print("""
@@ -32,5 +32,3 @@ def complete_msg(app_name):
 
         HAPPY HACKING!! 
      """%(app_name))
-
-
