@@ -5,12 +5,14 @@ import json
 from .classmodule import MyClass
 from .funcmodule import startDjangoProject
 from .createreact import getcurrent
+from .visuals import ascii_dact
 
 def main():
-    print('in main')
+    
     args = sys.argv[1:]
    
     if len(args) < 1: 
+        ascii_dact()
         print(
             
             """
