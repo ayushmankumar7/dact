@@ -1,4 +1,4 @@
-def complete_msg(app_name):
+def acsii():
     print('\033[36m' + """
                                                                                                  
                                                                  `+:.                               
@@ -23,6 +23,11 @@ def complete_msg(app_name):
     
      """ + '\033[0m')
 
+
+
+def complete_msg(app_name):
+    ascii()
+    
     print("Setup Complete! ")
     print("""
         To Start the server write the following commands: 
