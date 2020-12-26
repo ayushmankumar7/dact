@@ -1,5 +1,11 @@
-# dact
 ![dact logo](https://raw.githubusercontent.com/ayushmankumar7/dact/main/extras/dact.png)
+
+# dact
+
+dact is a CLI Package in Python focusing towards decreasing development setup time while working with React + Django Full Stack Development. 
+dact setup the whole, ready to work, Django project with React in just a single line command. 
+It handles all the urls, views, webpack, loaders, babel,etc. for the user in just a single command. Using dact, a developer can start writing their React code and see it render on their Django Web App. 
+
 
 ## Installing dact 
 
@@ -20,7 +26,7 @@
 2. You must have [Python](https://www.python.org/) installed in your system. 
 3. Python and pip or pip3 must be added to your environment.
 
-## How to install this Package 
+## How to install this Package(for Development)
 
 1. Clone this Repo 
 2. `cd dact`
