@@ -26,7 +26,7 @@ def ascii_dact():
 
 
 def complete_msg(app_name):
-    ascii()
+    ascii_dact()
 
     print("Setup Complete! ")
     print("""
