@@ -276,13 +276,17 @@ def write_index_css():
     with open("index.css",'w') as file:
         file.write('''
         ''')
-
+def add_gitignore():
+    open(".gitignore", "x")
+    with open(".gitignore", "w") as f:
+        f.write("node_modules")
 
 def create():
     x = getcurrent()
     make_dirs(x)
     os.chdir("static")
     write_webpack_config()
+    add_gitignore()
     write_package_json()
     os.system(f"npm install --package-lock")
     os.chdir("src")
