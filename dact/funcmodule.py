@@ -1,4 +1,5 @@
 import os
+import sys 
 from .createreact import create 
 from .visuals import complete_msg
 
@@ -86,25 +87,30 @@ def config_dact(name, app_name):
 
 
 def startDjangoProject(name, app_name = "reactfrontend"):
-    print("[INFO] Creating Django Project ....")
-    os.system(f"django-admin startproject {name}")
-    os.chdir(name)
 
-    print("[INFO] Creating Config File")
-    config_dact(name, app_name)
-    
+    if name in list(os.listdir()):
+        sys.exit("Project name exists")
+    else:
+        
+        print("[INFO] Creating Django Project ....")
+        os.system(f"django-admin startproject {name}")
+        os.chdir(name)
 
-    print("[INFO] Creating React App ....")
-    os.system(f"django-admin startapp {app_name}")
-    os.chdir(name)
-    
-    manipulate_settings('settings.py', app_name)
-    manipulate_project_url('urls.py', app_name)
+        print("[INFO] Creating Config File")
+        config_dact(name, app_name)
+        
 
-    os.chdir("..")
-    os.chdir(app_name)
+        print("[INFO] Creating React App ....")
+        os.system(f"django-admin startapp {app_name}")
+        os.chdir(name)
+        
+        manipulate_settings('settings.py', app_name)
+        manipulate_project_url('urls.py', app_name)
 
-    manipulate_app_view('views.py', app_name)
-    manipulate_app_urls('urls.py', app_name)
-    create()
-    complete_msg(name)
+        os.chdir("..")
+        os.chdir(app_name)
+
+        manipulate_app_view('views.py', app_name)
+        manipulate_app_urls('urls.py', app_name)
+        create()
+        complete_msg(name)
