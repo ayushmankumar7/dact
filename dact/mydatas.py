@@ -1,4 +1,4 @@
-class Data:
+class MyDatas():
     def __init__(self):
         self.index_html = '''
         {%load static%}
@@ -143,7 +143,7 @@ export default App;
                 }
             }
         '''.strip()
-        self.webpack_config_json = '''
+        self.webpack_config_js = '''
         const path = require("path");
             var webpack = require('webpack');
             var BundleTracker = require('webpack-bundle-tracker');
@@ -212,4 +212,13 @@ export default App;
             }
             };
         '''.strip()
-        
+    def getvals(self):
+        x = {'index.html':self.index_html,
+            'index.css':self.index_css,
+            'index.js':self.index_js,
+            'App.js':self.app_js,
+            'App.css':self.app_css,
+            'webpack.config.js':self.webpack_config_js,
+            'package.json':self.package_json,
+            'dact.svg':self.dact_svg}
+        return x

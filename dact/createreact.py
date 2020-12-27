@@ -1,5 +1,9 @@
 import os
 from pathlib import Path as path
+from mydatas import MyDatas
+
+x = MyDatas()
+d = x.getvals()
 
 def getcurrent():
     y = os.getcwdb()
@@ -18,15 +22,7 @@ def make_dirs(x):
 def make_template():
     open("index.html",'x')
     with open("index.html",'r+') as file:
-        file.write('''
-        {%load static%}
-        <html lang="en">
-            <body>
-                <div id="root"></div>
-            </body>
-            <script src = "{% static '/dist/app.bundle.js' %}"></script>
-        </html>
-        ''')
+        file.write(d['index.html'])
         file.close()
 
 def write_webpack_config():
