@@ -96,8 +96,7 @@ def write_webpack_config():
                 }]
             }
             ]
-            },
-  
+            }, 
             resolve: {
                 extensions: ['*', '.js', '.jsx','.scss']
             }

@@ -207,9 +207,9 @@ export default App;
             }
             ]
             },
-  
             resolve: {
                 extensions: ['*', '.js', '.jsx','.scss']
             }
             };
-        '''
+        '''.strip()
+        
