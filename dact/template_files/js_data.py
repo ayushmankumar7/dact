@@ -108,3 +108,10 @@ export default App;
             }
             };
         '''.strip()
+    def get_intial_js_files(self):
+        x = {
+            'index.js':self.index_js,
+            'App.js':self.app_js,
+            'webpack.config.js':self.webpack_config_js,
+            }
+        return x
