@@ -1,7 +1,7 @@
 class Css_Templates():
     def __init__(self):
-        self.index_css:''' '''
-        self.app_css:'''
+        self.index_css = ''' '''
+        self.app_css = '''
 .App
 {
     text-align: center;
