@@ -2,7 +2,6 @@ class Css_Templates():
     def __init__(self):
         self.index_css:''' '''
         self.app_css:'''
-
 .App
 {
     text-align: center;
@@ -20,3 +19,8 @@ class Css_Templates():
     color:#169A9A;
 }
         '''.strip()
+    def get_initial_css_files(self):
+        x = {
+            'index.css':self.index_css,
+            'App.css':self.app_css,
+        }
