@@ -19,6 +19,9 @@ setup(
             'dact-test = dact.__main__:testing'
         ]
     },
+    install_requires=[
+        'django==3.0.8'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
