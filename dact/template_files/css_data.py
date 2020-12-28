@@ -24,3 +24,4 @@ class Css_Templates():
             'index.css':self.index_css,
             'App.css':self.app_css,
         }
+        return x
