@@ -1,4 +1,3 @@
 class Css_Templates():
     def __init__(self):
-        self.index_css:''' '''
-        
+        self.index_css:'''.body{margin:0;} '''
