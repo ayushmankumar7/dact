@@ -31,3 +31,9 @@ It handles all the urls, views, webpack, loaders, babel,etc. for the user in jus
 1. Clone this Repo 
 2. `cd dact`
 3. `pip3 install -e .`
+
+
+On successfull setup of your project, you should see something like this:
+
+
+![dact_succesfull_installation](https://github.com/ayushmankumar7/dact/blob/dev/extras/dact-opening.jpg)
