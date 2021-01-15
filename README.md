@@ -11,7 +11,7 @@ It handles all the urls, views, webpack, loaders, babel,etc. for the user in jus
 
 `pip install dact`
 
-![dact_succesfull_installation](https://github.com/ayushmankumar7/dact/blob/dev/extras/install.gif)
+![dact_succesfull_installation](https://github.com/ayushmankumar7/dact/blob/main/extras/install.gif)
 
 
 ## Django + React
