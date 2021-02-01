@@ -6,6 +6,8 @@ dact is a CLI Package in Python focusing towards decreasing development setup ti
 dact setup the whole, ready to work, Django project with React in just a single line command. 
 It handles all the urls, views, webpack, loaders, babel,etc. for the user in just a single command. Using dact, a developer can start writing their React code and see it render on their Django Web App. 
 
+GeeksForGeeks Article - https://www.geeksforgeeks.org/djangoreact-full-stack-development-setup-using-dact/
+
 
 ## Installing dact 
 
