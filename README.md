@@ -6,10 +6,15 @@ dact is a CLI Package in Python focusing towards decreasing development setup ti
 dact setup the whole, ready to work, Django project with React in just a single line command. 
 It handles all the urls, views, webpack, loaders, babel,etc. for the user in just a single command. Using dact, a developer can start writing their React code and see it render on their Django Web App. 
 
+GeeksForGeeks Article - https://www.geeksforgeeks.org/djangoreact-full-stack-development-setup-using-dact/
+
 
 ## Installing dact 
 
 `pip install dact`
+
+![dact_succesfull_installation](https://github.com/ayushmankumar7/dact/blob/main/extras/install.gif)
+
 
 ## Django + React
 
@@ -37,3 +42,25 @@ On successfull setup of your project, you should see something like this:
 
 
 ![dact_succesfull_installation](https://github.com/ayushmankumar7/dact/blob/dev/extras/dact-opening.jpg)
+
+## How to work with dact 
+
+### To start the Server
+`cd myproject` <br/>
+`python manage.py runserver`
+
+### To start working on the frontend 
+
+1. Start watching the changes using 
+`dact-watch`
+Let `dact-watch` run in a different terminal. Make sure you run `dact-watch` in the same directory as `manage.py`.
+
+2. Edit your React Front-end at :
+`reactfrontend > static > src > App.js`
+
+3. Make your changes and save your file. 
+
+4. Refresh your page.
+
+
+
