@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name = 'dact',
-    version = '1.2.2',
+    version = '1.2.3',
     author = "Ayushman Kumar|Arkaprabha Chakraborty",
     author_email="ayushmankumar7@gmail.com",
     long_description = long_description,
@@ -16,7 +16,8 @@ setup(
         'console_scripts': [
             'dact = dact.__main__:main', 
             'dact-watch = dact.__main__:watch_react', 
-            'dact-test = dact.__main__:testing'
+            'dact-test = dact.__main__:testing',
+            'dact-install = dact.__main__:package_install'
         ]
     },
     install_requires=[
