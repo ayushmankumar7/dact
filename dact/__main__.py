@@ -41,6 +41,13 @@ def watch_react():
     os.chdir(f"{frontend_app}/static")
     os.system("npm run dev")
 
+def package_install():
+    with open("dact_config.json") as f:
+        data = json.load(f)
+    frontend_app = data['Frontend_AppName']
+    os.chdir(f"{frontend_app}/static")
+    os.system("npm install")
+
 
 def testing():
     print("Testing function was called")
