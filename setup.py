@@ -21,7 +21,7 @@ setup(
         ]
     },
     install_requires=[
-        'django==3.1.7'
+        'django==3.2.0'
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
