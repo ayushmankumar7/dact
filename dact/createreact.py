@@ -87,7 +87,7 @@ def create():
     write_webpack_config()
     add_gitignore()
     write_package_json()
-    os.system(f"npm install --package-lock")
+    os.system(f"npm install --package-lock --force")
     os.chdir("src")
     write_index_js()
     write_react_App_js()
