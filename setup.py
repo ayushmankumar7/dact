@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name = 'dact',
-    version = '1.2.3',
+    version = '1.3.0',
     author = "Ayushman Kumar|Arkaprabha Chakraborty",
     author_email="ayushmankumar7@gmail.com",
     long_description = long_description,
